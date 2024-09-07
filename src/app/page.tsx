@@ -86,10 +86,10 @@ export default function Home() {
             Bienvenido Bitch
           </h1>
           <Image
-            className="animate-jelly animate-delay-1000"
+            className="animate-jelly animate-delay-1000 object-contain md:object-fill"
             src="/Images/Grupo_1.png"
             width={500}
-            height={500}
+            height={420}
             alt="Logo"
           />
         </div>
