@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 import animated from "@midudev/tailwind-animations";
-const { nextui } = require("@nextui-org/react");
+import { nextui } from "@nextui-org/react";
 
 const config: Config = {
   content: [
