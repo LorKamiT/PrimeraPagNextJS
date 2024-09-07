@@ -1,101 +1,110 @@
+import React from "react";
+
 import Image from "next/image";
+import { NextUIProvider, User, Slider } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <NextUIProvider>
+      <div className="flex flex-col justify-center items-center w-full h-svh">
+        <div className="Navbar flex flex-row w-full h-24 animate-slide-in-top">
+          <div className="Logo animate-spin flex justify-center items-center w-[30%] md:w-[100%] md:justify-start md:pl-5 h-ful">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/Images/LogoLK.png"
+              width={64}
+              height={64}
+              className=" object-contain animate-blurred-fade-in animate-delay-300 hover:animate-pop hover:animate-iteration-count-infinite"
+              alt="Logo"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="NavBTN flex justify-end items-center w-full md:w-2/3 xl:w-1/2 2xl:w-1/4 h-24">
+            <div className="NavBox flex flex-row justify-around w-full h-full">
+              <a
+                href="https://www.youtube.com/watch?v=GAcq61I9IVM"
+                target="_blank"
+                className=" hover:scale-90 hover:animate-squeeze hover:animate-iteration-count-infinite flex justify-center"
+              >
+                <Image
+                  src="/Images/Capa_107.png"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                  alt="Menu"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=GAcq61I9IVM"
+                target="_blank"
+                className=" hover:scale-90 hover:animate-squeeze hover:animate-iteration-count-infinite flex justify-center"
+              >
+                <Image
+                  src="/Images/Capa_101.png"
+                  width={60}
+                  height={60}
+                  className=" object-contain"
+                  alt="Menu"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=GAcq61I9IVM"
+                target="_blank"
+                className=" hover:scale-90 hover:animate-squeeze hover:animate-iteration-count-infinite flex justify-center"
+              >
+                <Image
+                  src="/Images/Capa_96.png"
+                  width={60}
+                  height={60}
+                  className=" object-contain"
+                  alt="Menu"
+                />
+              </a>
+
+              <a
+                href="https://www.youtube.com/watch?v=GAcq61I9IVM"
+                target="_blank"
+                className=" hover:scale-90 hover:animate-squeeze hover:animate-iteration-count-infinite flex justify-center"
+              >
+                <Image
+                  src="/Images/Capa_110.png"
+                  width={60}
+                  height={60}
+                  className=" object-contain"
+                  alt="Menu"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="Hero flex flex-col justify-center items-center gap-8 w-11/12 h-[calc(100svh-6rem)] md:flex-row animate-zoom-in">
+          <h1 className=" text-2xl uppercase rotate-[15deg] animate-blurred-fade-in animate-delay-500">
+            Bienvenido Bitch
+          </h1>
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className="animate-jelly animate-delay-1000"
+            src="/Images/Grupo_1.png"
+            width={500}
+            height={500}
+            alt="Logo"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Slider
+            label="Temperature"
+            step={0.01}
+            maxValue={1}
+            minValue={0}
+            defaultValue={0.4}
+            className="max-w-md"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+        <div className="SegundaSeccion flex flex-col justify-center items-center gap-8 w-full">
+          <User
+            name="Mauricio D."
+            description="Product Designer"
+            avatarProps={{
+              src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+            }}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+    </NextUIProvider>
   );
 }
